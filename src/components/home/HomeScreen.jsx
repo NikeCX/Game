@@ -13,7 +13,7 @@ export default function HomeScreen({ onNavigate }) {
 
   return (
     <div className="screen home-screen">
-      <Header onHome={() => onNavigate('home')} />
+      <Header />
       <div className="home-screen__intro">
         <h1>Learn to crack matrix reasoning puzzles</h1>
         <p>Five worlds, five rules. Master each one, then take the timed Final Challenge — just like a real Matrigma test.</p>

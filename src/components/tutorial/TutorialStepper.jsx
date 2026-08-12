@@ -32,7 +32,7 @@ export default function TutorialStepper({ ruleId, onNavigate }) {
 
   return (
     <div className="screen tutorial-screen">
-      <Header onHome={() => onNavigate('home')} subtitle={`Learn: ${rule.name}`} />
+      <Header onBackToWorlds={() => onNavigate('home')} subtitle={`Learn: ${rule.name}`} />
       <div className="tutorial-screen__body">
         <p className="tutorial-screen__rule-description">{rule.description}</p>
         <div className="tutorial-steps-nav">

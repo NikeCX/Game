@@ -77,7 +77,7 @@ export default function ChallengeScreen({ onNavigate }) {
   if (phase === 'summary' && finalResult) {
     return (
       <div className="screen challenge-screen">
-        <Header onHome={() => onNavigate('home')} subtitle="Final Challenge" />
+        <Header onBackToWorlds={() => onNavigate('home')} subtitle="Final Challenge" />
         <div className="challenge-screen__body">
           <ScoreSummary result={finalResult} onHome={() => onNavigate('home')} onRetry={handleRetry} />
         </div>
@@ -87,7 +87,7 @@ export default function ChallengeScreen({ onNavigate }) {
 
   return (
     <div className="screen challenge-screen">
-      <Header onHome={() => onNavigate('home')} subtitle="Final Challenge" />
+      <Header onBackToWorlds={() => onNavigate('home')} subtitle="Final Challenge" />
       <div className="challenge-screen__body">
         <div className="challenge-screen__meta">
           <Timer remaining={timer.remaining} />

@@ -18,6 +18,8 @@ export default function WorldNode({ ruleId, progress, mastery, onTutorial, onPra
       </div>
       <h3 className="world-node__name">{rule.name}</h3>
       <p className="world-node__tagline">{rule.tagline}</p>
+      <p className="world-node__description">{rule.description}</p>
+      <p className="world-node__prep-text">💼 {rule.prepText}</p>
       {accuracy !== null && (
         <p className="world-node__stats">
           {progress.puzzlesCorrect}/{progress.puzzlesAttempted} correct ({accuracy}%)
