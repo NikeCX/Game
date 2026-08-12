@@ -43,7 +43,7 @@ export default function PracticeScreen({ ruleId, onNavigate }) {
 
   return (
     <div className="screen practice-screen">
-      <Header onHome={() => onNavigate('home')} title={`Practice: ${rule.name}`} />
+      <Header onHome={() => onNavigate('home')} subtitle={`Practice: ${rule.name}`} />
       <div className="practice-screen__body">
         <div className="practice-screen__meta">
           <span className="difficulty-pip" title="Difficulty">

@@ -102,6 +102,13 @@ button {
   z-index: 10;
 }
 
+.app-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
 .app-header__logo {
   display: flex;
   align-items: center;
@@ -110,6 +117,7 @@ button {
   border: none;
   cursor: pointer;
   padding: 0;
+  flex-shrink: 0;
 }
 
 .app-header__icon {
@@ -120,6 +128,18 @@ button {
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--color-text);
+}
+
+.app-header__subtitle {
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--color-border);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .app-header__stats {
@@ -677,7 +697,8 @@ button {
 /* ---------- Responsive ---------- */
 
 @media (max-width: 480px) {
-  .app-header__title {
+  .app-header__title,
+  .app-header__subtitle {
     display: none;
   }
   .score-summary__score {
