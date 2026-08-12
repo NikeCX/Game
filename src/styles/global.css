@@ -94,6 +94,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
   padding: 1rem 1.5rem;
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
@@ -107,6 +109,7 @@ button {
   align-items: center;
   gap: 0.75rem;
   min-width: 0;
+  flex: 1 1 auto;
 }
 
 .app-header__logo {
@@ -163,12 +166,15 @@ button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-width: 0;
+  flex-shrink: 1;
 }
 
 .app-header__stats {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-shrink: 0;
 }
 
 /* ---------- XP bar / streak ---------- */
@@ -183,6 +189,7 @@ button {
   font-weight: 700;
   font-size: 0.85rem;
   color: var(--color-primary-dark);
+  white-space: nowrap;
 }
 
 .xp-bar__track {
@@ -191,6 +198,7 @@ button {
   background: var(--color-surface-2);
   border-radius: 999px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .xp-bar__fill {
@@ -735,11 +743,33 @@ button {
 /* ---------- Responsive ---------- */
 
 @media (max-width: 480px) {
-  .app-header__title,
-  .app-header__subtitle {
+  .app-header {
+    padding: 0.75rem 1rem;
+  }
+  .app-header__title {
     display: none;
+  }
+  .app-header__subtitle {
+    font-size: 0.95rem;
+    padding-left: 0.5rem;
+  }
+  .app-header__back-link {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.78rem;
+  }
+  .xp-bar__track {
+    width: 56px;
+  }
+  .streak-badge {
+    padding: 0.2rem 0.45rem;
   }
   .score-summary__score {
     font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .xp-bar__track {
+    display: none;
   }
 }
