@@ -1,4 +1,5 @@
 import { useGameStore } from '../../store/useGameStore';
+import LogoMark from './LogoMark';
 import XPBar from './XPBar';
 import StreakBadge from './StreakBadge';
 
@@ -10,7 +11,7 @@ export default function Header({ onHome, subtitle }) {
     <header className="app-header">
       <div className="app-header__brand">
         <button type="button" className="app-header__logo" onClick={onHome} aria-label="Go to home">
-          <span className="app-header__icon">🧠</span>
+          <LogoMark size={28} className="app-header__icon" />
           <span className="app-header__title">Matrix Academy</span>
         </button>
         {subtitle && <span className="app-header__subtitle">{subtitle}</span>}
